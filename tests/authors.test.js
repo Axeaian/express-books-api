@@ -4,10 +4,10 @@ const request = require("supertest");
 const MongodbMemoryServer = require("mongodb-memory-server").default;
 const mongod = new MongodbMemoryServer();
 const mongoose = require("mongoose");
-const Author = require("./models/author");
-const Book = require("./models/book");
+const Author = require("../models/author");
+const Book = require("../models/book");
 
-const app = require("./app");
+const app = require("../app");
 
 async function addFakeBooks() {
     const author1 = new Author({
